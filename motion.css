@@ -1,0 +1,53 @@
+/* Expressive motion edition, explicitly requested. */
+.motion-enabled .motion-toggle{display:block!important;background:#16382d;color:#b8f8d8;border-color:#75c49b55;padding:8px 13px}
+.motion-enabled .hero-art{animation:map-living 5.5s ease-in-out infinite alternate!important;will-change:transform}
+.motion-enabled .destination-card{animation:destination-living 4s ease-in-out infinite alternate!important;will-change:transform}
+.motion-enabled .scene-caption{animation:caption-living 4.5s -1s ease-in-out infinite alternate!important}
+.motion-enabled .scene-glow{animation:ambient-living 7s ease-in-out infinite alternate!important}
+.motion-enabled .scene-orbit{animation:orbit-living 12s ease-in-out infinite alternate!important}
+.motion-enabled .orbit-two{animation-delay:-6s!important}
+.motion-enabled .hero h1 em{animation:title-living 4s ease-in-out infinite alternate!important;background-size:260% 100%}
+.motion-enabled .hero-route{animation:route-drift 4s linear infinite!important}
+.motion-enabled .route-traveler{offset-path:path('M391 279V150H253V104');animation:travel-route 4s linear infinite!important;filter:drop-shadow(0 0 6px #adffcf)}
+.motion-enabled .destination-pulse{animation:pin-breathe 1.8s ease-out infinite!important}
+.motion-enabled .ticker-track{animation:ticker-slide 20s linear infinite!important}
+.motion-enabled .storefront{animation:shop-living 4.5s ease-in-out infinite alternate!important}
+.motion-enabled .basket-card{animation:basket-living 4.5s -.8s ease-in-out infinite alternate!important}
+.motion-enabled .basket-products i{animation:product-living 2s ease-in-out infinite alternate!important}
+.motion-enabled .basket-products i:nth-child(2){animation-delay:-.7s!important}
+.motion-enabled .basket-products i:nth-child(3){animation-delay:-1.4s!important}
+.motion-enabled .boarding-card{animation:flight-living 5s -2s ease-in-out infinite alternate!important}
+.motion-enabled .boarding-card img{animation:plane-living 2.5s ease-in-out infinite alternate!important}
+.motion-enabled .camera-phone{animation:phone-living 5s ease-in-out infinite alternate!important}
+.motion-enabled .camera-arrows path{animation:ar-living 1.5s ease-in-out infinite!important}
+.motion-enabled .scan-beam{animation:scan-beam 1.4s ease-in-out infinite alternate!important}
+.motion-enabled .visual-dot,.motion-enabled .hero .dot{animation:dot-living 2s ease-in-out infinite!important}
+.motion-enabled .hero .button{animation:button-living 3s ease-in-out infinite!important}
+.motion-enabled .vision-diagram li>span{animation:step-living 3s ease-in-out infinite!important}
+.motion-enabled .vision-diagram li:nth-child(2)>span{animation-delay:-2s!important}
+.motion-enabled .vision-diagram li:nth-child(3)>span{animation-delay:-1s!important}
+.motion-enabled .project-preview img{animation:project-living 6s ease-in-out infinite alternate!important}
+.motion-enabled.motion-paused *,.motion-enabled.motion-paused *:before,.motion-enabled.motion-paused *:after{animation-play-state:paused!important}
+@keyframes map-living{from{transform:translateX(-50%) translateY(-14px) rotateX(18deg) rotateZ(-5deg)}to{transform:translateX(-50%) translateY(13px) rotateX(9deg) rotateZ(-1deg)}}
+@keyframes destination-living{from{transform:translateY(-14px) rotate(1deg)}to{transform:translateY(13px) rotate(6deg)}}
+@keyframes caption-living{from{transform:translateY(10px) rotate(-1deg)}to{transform:translateY(-15px) rotate(1deg)}}
+@keyframes ambient-living{from{transform:translate(-25px,-10px) scale(.88);opacity:.6}to{transform:translate(25px,15px) scale(1.15);opacity:1}}
+@keyframes orbit-living{from{transform:translate(-50%,-50%) rotate(-20deg) scale(.95)}to{transform:translate(-50%,-50%) rotate(6deg) scale(1.06)}}
+@keyframes title-living{from{background-position:0% 50%}to{background-position:100% 50%}}
+@keyframes travel-route{0%{offset-distance:0%;opacity:0}8%{opacity:1}90%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@keyframes shop-living{from{transform:translateX(-50%) translateY(-10px) rotate(-10deg)}to{transform:translateX(-50%) translateY(4px) rotate(-2deg)}}
+@keyframes basket-living{from{transform:translateX(-50%) translateY(5px) rotate(10deg)}to{transform:translateX(-50%) translateY(-12px) rotate(1deg)}}
+@keyframes product-living{from{translate:0 0}to{translate:0 -8px}}
+@keyframes flight-living{from{transform:translateX(-50%) translateY(-10px) rotate(-10deg)}to{transform:translateX(-50%) translateY(7px) rotate(-2deg)}}
+@keyframes plane-living{from{translate:-5px 4px;rotate:-8deg}to{translate:5px -4px;rotate:8deg}}
+@keyframes phone-living{from{transform:translateY(-10px) rotate(-9deg)}to{transform:translateY(9px) rotate(-3deg)}}
+@keyframes ar-living{0%,100%{opacity:.3;transform:translateY(9px)}50%{opacity:1;transform:translateY(-7px)}}
+@keyframes dot-living{0%,100%{box-shadow:0 0 0 0 #8ae5c050}65%{box-shadow:0 0 0 7px #8ae5c000}}
+@keyframes button-living{0%,100%{box-shadow:0 0 0 0 #a8edcd00}50%{box-shadow:0 0 28px 3px #a8edcd28}}
+@keyframes step-living{0%,100%{color:#83c29c;opacity:.5}50%{color:#d9ffe2;opacity:1;text-shadow:0 0 12px #b1f9c7}}
+@keyframes project-living{from{transform:translateY(-7px) rotate(-1.5deg) scale(.98)}to{transform:translateY(7px) rotate(1.5deg) scale(1.02)}}
+@media(max-width:580px){.motion-enabled .hero-art{animation:map-living-mobile 5s ease-in-out infinite alternate!important}.motion-enabled .motion-toggle{font-size:8px;padding:7px 9px;top:16px}.motion-enabled .destination-card{animation-duration:4.5s!important}}
+@keyframes map-living-mobile{from{transform:translateX(-50%) translateY(-8px) rotateX(12deg) rotateZ(-7deg) scale(.68)}to{transform:translateX(-50%) translateY(9px) rotateX(4deg) rotateZ(-2deg) scale(.68)}}
+@media(max-width:360px){.motion-enabled .hero-art{animation:map-living-small 5s ease-in-out infinite alternate!important}}
+@keyframes map-living-small{from{transform:translateX(-50%) translateY(-8px) rotateX(12deg) rotateZ(-7deg) scale(.6)}to{transform:translateX(-50%) translateY(9px) rotateX(4deg) rotateZ(-2deg) scale(.6)}}
+body.motion-enabled.motion-paused *,body.motion-enabled.motion-paused *:before,body.motion-enabled.motion-paused *:after{animation-play-state:paused!important}
